@@ -1,4 +1,4 @@
-
+# %%
 file = open("myfile.txt")
 print(file)
 print(file.read())
@@ -11,6 +11,16 @@ open('myfile.txt', 'w').write('幹你娘2\n幹你娘3\n幹你娘4\n')
 # 4. file.readlines() - returns a list containing each line in the file as a list item.
 # 5. file.seek(offset) - sets the files current postition at the offset.
 # 6. file.close()
-file = open("myfile.txt")
-print(file.readlines())
 # file = open("myfile.txt")
+file.seek(0)
+print("readlines+", file.readlines())
+file.seek(0)
+for line in file.readlines():
+    print("***"+line)
+
+
+file.close()
+
+# file = open("myfile.txt")
+# file.seek(0)
+# print(file.readlines())
